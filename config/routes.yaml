@@ -1,0 +1,22 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+register:
+  path: /register
+  controller: App\Controller\AuthController::register
+  methods: POST
+
+api_login_check:
+  path: /api/login_check
+  controller: App\Controller\AuthController::getTokenUser
+
+get_image:
+    path: api/get-image/{id}
+    controller: App\Controller\ImageController::getImages
+    requirements:
+        id: '\d+'
+
+test:
+  path: /api/test
+  controller: App\Controller\ApiController::test
+
